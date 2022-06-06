@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>medical survey</title>
+        <style>
+
+                form{
+                    position: relative;
+                    /* z-index: 1; */
+                    background: whitesmoke;
+                    max-width: 70%;
+                    max-height: ;
+                    margin: 0 auto 100px;
+                    padding: 45px;
+                    text-align: center;  
+                    border-radius: 40px 20px;
+                    /* border: none; */
+                    color: green;
+                    font-size: 14;
+                    font-family:Georgia, 'Times New Roman', Times, serif ;
+                }
+            h1 {
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            /* form{
+                align-items: center;
+                position: absolute;
+            } */
+            
+        </style>
+    </head>
+    <body>
+        <h1>Medical Survey</h1>
+        <p>These forms are required for your children to attend camp</p>
+
+        <form>
+            <table border="0">
+
+                <p>Medical/Health Information</p>
+                <td>
+                    <label>Name of Physician or Clinic/Hospital</label><br>
+                    <input type="text" name="name" placeholder="" style="width: 90%;"><br><br>
+                </td>
+                <br>
+                <tr>
+                    <td>
+                        <label>Address</label><br>
+                        <input type="text" name="address" placeholder="Street Address" style="width: 90%;"><br>
+                        
+                    </td><br>
+                    <tr>
+                        <td>
+                            <input type="text" name="city" placeholder="city">
+                            <input type="text" name="State/Providence" placeholder="State/providence">
+                        </td>
+                        <tr>
+                            <td>
+                                <input type="text" name="postal" placeholder="postal/Zip Code">
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Is the camp up-to-date on all immunization?</label><br>
+                            <!-- <input> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio">Yes
+                            <input type="radio">No
+                        </td>
+                    </tr>
+                    <td>
+                        <label>Attach immunization record or waiver</label><br>
+                        <input type="file" style="width: 90%;">
+                
+                    </td><br>
+                    
+                </tr>
+                <td>
+                    <label>Allergies? check all that apply  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Explain any allegies</label><br>
+                    
+                        <input type="radio">Food<br>
+                        <input type="radio">Medical<br>
+                        <input type="radio">Environment<br>
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                   <td>
+                    <textarea style="width: 70%; height: 70%;"></textarea>
+                   </td>
+                </td>
+
+                
+            </table>
+                <!-- <input type="submit" style="background-color: greenyellow; color: white;  -->
+        </form>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+
+<html lang="en">
+    <head>
+      
+      <!-- === Design by: foolishdeveloper.com ===--->
+      
+        <title>Simple To Do List</title>
+        <!--Google Font-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <!--Font Awesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <!--Stylesheet-->
+        <style media="screen">
+            *,
+    *:before,
+    *:after{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background: #066acd;
+    }
+    .container{
+        width: 40%;
+        min-width: 450px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+            background: white;
+            border-radius: 10px;
+    
+    }
+    
+    #newtask{
+        position: relative;
+        padding: 30px 20px;
+    }
+    #newtask input{
+        width: 75%;
+        height: 45px;
+        font-family: 'Poppins',sans-serif;
+        font-size: 15px;
+        border: 2px solid #d1d3d4;
+        padding: 12px;
+        color: #111111;
+        font-weight: 500;
+        position: relative;
+        border-radius: 5px;
+    }
+    #newtask input:focus{
+        outline: none;
+        border-color: #0d75ec;
+    }
+    
+    #newtask button{
+        position: relative;
+        float: right;
+        width: 20%;
+        height: 45px;
+        border-radius: 5px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #0d75ec;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        outline: none;
+    }
+    #tasks{
+        background-color: #ffffff;
+        padding: 30px 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+    }
+    .task{
+        background-color: #c5e1e6;
+        height: 50px;
+            margin-bottom: 8px;
+        padding: 5px 10px;
+        display: flex;
+            border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #939697;
+        cursor: pointer;
+    }
+    .task span{
+        font-family: 'Poppins',sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .task button{
+        background-color: #0a2ea4;
+        color: #ffffff;
+        height: 100%;
+        width: 40px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    .completed{
+        text-decoration: line-through;
+    }
+        </style>
+    </head>
+    <body>
+        <p class="title">To-Do List</p>
+        <div class="container">
+            <div id="newtask">
+                <input type="text" placeholder="Task to be done..">
+                <button id="push">Add</button>
+               
+                <!-- <input type="reset" id="reset" value="reset" onclick="clear1()"> -->
+            </div>
+            <!-- <button id="reset" onclick="clear #newtaskinput">Reset</button> -->
+    
+            <div id="tasks"></div>
+        </div>
+        <!--Script-->
+        <script type="text/javascript">
+            // function clear1(){
+            //     document.getElementById("reset").reset();
+            // }
+
+            // document.querySelector('#reset').onclick = function(reset);e
+    document.querySelector('#push').onclick = function(){
+        //Frst i have given the 'if' condition. if nothing is input in this input place, that is,if the input is 0, then a kind of alert will beseen here. This eeror message will ask you to input something.
+        if(document.querySelector('#newtask input').value.length == 0){
+            alert("Please Enter a Task")
+        }
+            
+            //Now i have added the below condition using else, which means what will happen if you add some information.
+            //First i used innerHTML which help to see this information on the webpage.
+            //then i said to show the input text in the id called 'taskname'. i have already added the required css code for the 'taskname'
+            //Then i created a delete button that will help to delete the informatonin the list. for this, i have added an icon here. i have already added the required css code for this button.
+        else{
+            document.querySelector('#tasks').innerHTML += `
+                <div class="task">
+                    <span id="taskname">
+                        ${document.querySelector('#newtask input').value}
+                    </span>
+                    <button class="delete">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
+            `;
+                //arrangement to make the delete button effective. that button will help to delete that information. here are the codes to remove the information using a simple 'onclick'
+                
+            var current_tasks = document.querySelectorAll(".delete");
+            for(var i=0; i<current_tasks.length; i++){
+                current_tasks[i].onclick = function(){
+                    this.parentNode.remove();
+                }
+            }
+
+            // var current_tasks = document.querySelectorAll("reset");
+            // for(var i=0; i<current_tasks.length; i++){
+            //     current_tasks[i].onclick = function(){
+            //         this.parentNode.reset();
+            //     }
+            // }
+    
+          
+    
+     
+        }
+    }
+        </script>
+    
+    </body>
+    </html>
+    
